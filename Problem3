@@ -1,0 +1,41 @@
+package problem3projecteuler;
+
+public class Problem3ProjectEuler {
+    
+    long begin = System.currentTimeMillis();
+    long number = 600851475143L; // Number given in problem: 600851475143L
+    long solution = number; // The answer to the problem
+    
+    // Method to find the answer
+    void start() {
+        
+        // Loops through all numbers that could possibly be factors
+        for (long i = 2; i < number / i; i++) {
+            
+            // Checks if it is a factor of number
+            if (number % i == 0) {
+                
+                solution = i; 
+                number = number / i;
+                
+            }
+            
+        }
+        
+        if (solution > 1)
+            solution = number;
+        
+        long end = System.currentTimeMillis();
+        System.out.println("Time to solve: " + (end - begin) + " ms");
+        System.out.println("The solution is: " + solution);
+
+    }
+
+    public static void main(String[] args) {
+        
+        Problem3ProjectEuler myProject = new Problem3ProjectEuler();
+        myProject.start();
+   
+    }
+    
+}
