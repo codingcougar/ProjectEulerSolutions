@@ -1,0 +1,22 @@
+package project.euler.pkg1;
+
+public class Problem1ProjectEuler {
+
+    public static void main(String[] args) {
+        
+        int sum = 0; // Sum of multiples of 3 or 5 under 1000
+        
+        // Loops through all natural numbers under 1000
+        for (int i = 0; i < 1000; i++) {
+            
+            // Checks if multiple of 3 or 5
+            if (i % 3 == 0 || i % 5 == 0)
+                sum += i;
+      
+        }
+        
+        System.out.println("The sum is: " + sum); 
+        
+    }
+      
+}
