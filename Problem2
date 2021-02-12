@@ -1,0 +1,32 @@
+package problem2project.euler;
+
+public class Problem2ProjectEuler {
+
+    
+    public static void main(String[] args) {
+        
+        int first = 1; // First in sequence
+        int second = 2; // Second in sequence
+        int sum = 2; // First even term is 2
+        int current = 0; // Current number being checked
+        
+        // Loops through until sequence meets or exceeds 4 million
+        while(current < 4000000) {
+            
+            current = first + second;
+            
+            // Checks if current is even
+            if (current % 2 == 0)
+                sum += current;
+            
+            // Sets terms to one in front of them
+            first = second;
+            second = current;
+            
+        }
+    
+        System.out.println("The sum is: " + sum);
+
+    }
+    
+}
